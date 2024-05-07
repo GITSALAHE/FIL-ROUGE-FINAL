@@ -36,7 +36,7 @@ const AddStory = () => {
         formdata.append("content", content)
 
         try {
-            const { data } = await axios.post("/story/addstory", formdata, config)
+            const { data } = await axios.post(process.env.REACT_APP_API_KEY +"/story/addstory", formdata, config)
             setSuccess('Add story successfully ')
 
             clearInputs()

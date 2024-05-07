@@ -30,7 +30,7 @@ const ChangePassword = () => {
 
         try {
             const { data } = await axios.put(
-                "/user/changePassword",
+                process.env.REACT_APP_API_KEY +"/user/changePassword",
                 {
                     newPassword,
                     oldPassword

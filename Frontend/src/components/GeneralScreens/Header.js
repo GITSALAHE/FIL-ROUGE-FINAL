@@ -65,7 +65,7 @@ const Header = () => {
 
                                     :
 
-                                    <img src={`/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                                    <img src={process.env.REACT_APP_API_KEY +`/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
 
                                 }
 

@@ -21,7 +21,7 @@ const PrivateRoute =( ) => {
             },
         };
         try {
-            const { data } = await axios.get("/auth/private", config); 
+            const { data } = await axios.get(process.env.REACT_APP_API_KEY +"/auth/private", config); 
 
             setAuth(true)
             setActiveUser(data.user)

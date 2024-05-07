@@ -29,7 +29,7 @@ const Profile = () => {
             setLoading(true)
 
             try {
-                const { data } = await axios.get("/user/profile", config)
+                const { data } = await axios.get(process.env.REACT_APP_API_KEY +"/user/profile", config)
 
                 setUser(data.data)
 

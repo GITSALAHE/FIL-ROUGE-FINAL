@@ -13,7 +13,7 @@ const ForgotPasswordScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "/auth/forgotpassword",
+        process.env.REACT_APP_API_KEY + "/auth/forgotpassword",
         { email }
       );
 
